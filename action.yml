@@ -1,13 +1,13 @@
 description: "Builds and deploys a React based UI"
 inputs: 
-  gs_url: 
+  - gs_url: 
     required: true
-  project_id: 
+  - project_id: 
     required: true
-  sa_email: 
+  - sa_email: 
     description: "Service account email address"
     required: true
-  sa_key: 
+  - sa_key: 
     required: true
 name: "Deploy UI"
 runs: 
