@@ -14,7 +14,7 @@ runs:
     using: 'docker'
     image: 'Dockerfile'
     args:
-        - ${{ inputs.sa-email }}
-        - ${{ inputs.sa-key }}
-        - ${{ inputs.project-id }}
-        - ${{ inputs.gs-url }} 
+    - ${{ inputs.sa-email }}
+    - ${{ inputs.sa-key }}
+    - ${{ inputs.project-id }}
+    - ${{ inputs.gs-url }} 
