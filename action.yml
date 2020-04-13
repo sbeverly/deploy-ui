@@ -1,20 +1,20 @@
 description: "Builds and deploys a React based UI"
 inputs: 
-  gs-url: 
+  gs_url: 
     required: true
-  project-id: 
+  project_id: 
     required: true
-  sa-email: 
+  sa_email: 
     description: "Service account email address"
     required: true
-  sa-key: 
+  sa_key: 
     required: true
 name: "Deploy UI"
 runs: 
   args: 
-    - "${{ inputs.sa-email }}"
-    - "${{ inputs.sa-key }}"
-    - "${{ inputs.project-id }}"
-    - "${{ inputs.gs-url }}"
+    - "${{ inputs.sa_email }}"
+    - "${{ inputs.sa_key }}"
+    - "${{ inputs.project_id }}"
+    - "${{ inputs.gs_url }}"
   image: Dockerfile
   using: docker
