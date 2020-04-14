@@ -3,4 +3,5 @@ ARG SA_EMAIL
 ARG GOOGLE_APPLICATION_CREDENTIALS
 ARG PROJECT_ID
 RUN echo $GOOGLE_APPLICATION_CREDENTIALS > sa_key.json
-ENTRYPOINT ["bin/sh", "-c", "./deploy.sh"]
+COPY ./entrypoint ./entrypoint
+ENTRYPOINT ["bin/sh", "-c", "./entrypoint.sh"]
