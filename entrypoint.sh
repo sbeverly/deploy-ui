@@ -3,6 +3,8 @@ set -e
 
 if [[ $1 ]]; then gcloud auth activate-service-account $1 --key-file $2 --project-id $3; fi
 
+ls ./
+ls $GITHUB_WORKSPACE
 cd $GITHUB_WORKSPACE/login-ui
 
 npm ci --prod
