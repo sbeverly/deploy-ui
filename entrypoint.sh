@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 if [[ $1 ]]; then gcloud auth activate-service-account $1 --key-file $2 --project-id $3; fi
