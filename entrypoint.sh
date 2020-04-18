@@ -6,6 +6,7 @@ if [[ $1 ]]; then gcloud auth activate-service-account $1 --key-file ./sa_key.js
 npm ci --prod
 npm run-script build
 
+ls .
 echo $1
 echo $3
 
