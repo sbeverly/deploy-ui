@@ -3,6 +3,8 @@ set -e
 
 cat $2 > /sa_key.json
 
+cat $1
+
 if [[ $1 ]]; then gcloud auth activate-service-account $1 --key-file /sa_key.json --project $3; fi
 
 npm ci --prod
