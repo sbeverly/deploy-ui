@@ -2,7 +2,8 @@
 set -e
 
 echo "START PRINTING"
-cat /sa_key.json
+cat $INPUT_SA_KEY
+cat $SA_KEY
 echo "END PRINTING"
 
 if [[ $1 ]]; then gcloud auth activate-service-account $1 --key-file /sa_key.json --project $3; fi
