@@ -12,9 +12,9 @@ inputs:
     required: true
 runs: 
   args: 
-    - "${{ inputs.sa_email }}"
-    - "${{ inputs.sa_key }}"
-    - "${{ inputs.project_id }}"
-    - "${{ inputs.gs_url }}"
+    - ${{ inputs.sa_email }}
+    - ${{ inputs.sa_key }}
+    - ${{ inputs.project_id }}
+    - ${{ inputs.gs_url }}
   image: Dockerfile
   using: docker

@@ -6,7 +6,7 @@ if [[ $1 ]]; then gcloud auth activate-service-account $INPUT_SA_EMAIL --key-fil
 npm ci --prod
 npm run-script build
 
-ls .
-echo $GITHUB_WORKSPACE
+echo $1
+echo $4
 
 gsutil -h "Cache-Control: no-cache, max-age=0, must-revalidate" rsync -rd ./build/ $INPUT_GS_URL
