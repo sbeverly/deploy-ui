@@ -1,9 +1,10 @@
 #!/bin/bash
 set -e
 
-cat $2 > /sa_key.json
-
-cat $1
+echo "VARS"
+echo $1
+echo $2
+echo "END VARS"
 
 if [[ $1 ]]; then gcloud auth activate-service-account $1 --key-file /sa_key.json --project $3; fi
 
