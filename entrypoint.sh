@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
 
-if [[ $INPUT_SA_EMAIL ]]; then gcloud auth activate-service-account $INPUT_SA_EMAIL --key-file ./sa_key.json --project-id $INPUT_PROJECT_ID; fi
+if [[ $1 ]]; then gcloud auth activate-service-account $1 --key-file ./sa_key.json --project-id $3; fi
 
 npm ci --prod
 npm run-script build
 
-echo $INPUT_SA_EMAIL
-echo $INPUT_PROJECT_ID
+echo $1
+echo $3
 
-gsutil -h "Cache-Control: no-cache, max-age=0, must-revalidate" rsync -rd ./build/ $INPUT_GS_URL
+gsutil -h "Cache-Control: no-cache, max-age=0, must-revalidate" rsync -rd ./build/ $4
